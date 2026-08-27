@@ -1,0 +1,88 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONZA CARRO TOP</title>
+    <style>
+        header {
+            background-color: #183C63;
+            color: #FFFFFF;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        main {
+            background-attachment: #FFFFFF;
+            color: #183C63;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+        article{
+            display: flex;
+
+        }
+
+        img {
+            width: 250px;
+            height: 250px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Monza, Um Carro Muito Bão.</h1>
+        <p>Vou mostrar neste site, o motivo de o carro Monza ser muito bom</p>
+    </header>
+    <main>
+        <article>
+            <img src="imagem-blog.png" alt=Ilustração em pixel art de um Chevrolet Monza azul clássico em uma estrada, com
+                borda azul-escura e a escrita Monza Blog na parte inferior>
+            <div>
+                <h2>Primeiro Post Sobre Monzas </h2>
+                <p>Por: Felipe de Lima Fabre </p>
+                <p>Boas Vindas ao meu Novo Site de Monza!Aqui vou compartilhar informações e curiosidades do Monza</p>
+                <button>👍 <span>0</span></button>
+                <button>❤ <span>0</span></button>
+            </div>
+        </article>
+        <article>
+            <img src="imagem-blog2.png" alt=Ilustração em pixel art no estilo retroisométrico mostrando um Chevrolet Monza clássico azul claro estacionado em uma rua. O carro possui detalhes como para-choques pretos, faróis retangulares e rodas escuras, com um gramado verde e uma parede de tijolos ao fundo.>
+            <div>
+            <h2>Segundo Post Sobre Monzas </h2>
+            <p>Por: Felipe de Lima Fabre </p>
+            <p>O crevrolet Monza possui versões 1.6, 1.8 e 2.0</p>
+            <button>👍 <span>0</span></button>
+            <button>❤ <span>0</span></button>
+        </div>
+        </article>
+    </main>
+</body>
+<script>
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function (botao) {
+        let curtiu = false;
+        botao.addEventListener("click", botaoClicado);
+
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+            if (curtiu === false){
+                texto.textContent++;
+                curtiu = true;
+            } else{
+                texto.textContent--;
+                curtiu = false
+            }
+        }
+    })
+
+
+</script>
+<html>
